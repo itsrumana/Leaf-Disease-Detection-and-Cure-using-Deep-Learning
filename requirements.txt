@@ -1,0 +1,11 @@
+download the dataset from https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
+ 
+install the libraries
+tensorflow
+keras
+numpy
+os
+matplotlib
+pillow
+sckit-learn
+sckit-image
