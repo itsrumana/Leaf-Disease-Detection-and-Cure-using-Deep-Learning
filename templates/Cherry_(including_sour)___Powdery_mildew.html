@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Leaf Disease Detection</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+        *{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+        </div>
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Leaf Disease Detection</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src={{user_image}} alt="User Image" style="width:500px;height:500px;margin-top:200px">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Cause: </b> </h4>
+                    <h6>
+                        • The fungus overwinters in buds on twigs and as chasmothecia, which are spore-containing structures, on the bark of twigs and branches.<br> 
+                        • Secondary spores produced in spring spread the fungus to new growth. Infections can be severe in commercial orchards during years of low rainfall, high humidity, and warm temperatures (70° to 80°F). <br>
+                        • The disease is particularly severe on new growth, such as shoots of inner scaffolds, and can infect fruit as well, causing direct crop loss. In warm, humid, coastal areas, powdery mildew can also be severe after harvest.<br>
+                      
+                    </h6>
+                    <h4><b> Symptoms: </b> </h4>
+                    <h6>
+                          • Initial symptoms, often occurring 7 to 10 days after the onset of the first irrigation, are light roughly-circular, powdery looking patches on young, susceptible leaves (newly unfolded, and light green expanding leaves). Older leaves develop an age-related (ontogenic) resistance to powdery mildew and are naturally more resistant to infection than younger leaves.<br>
+                    </h6>
+                    <h4><b> Treatment: </b> </h4>
+                    <h6>
+                        • Plant resistant cultivars in sunny locations whenever possible.<br>
+                        • Prune or stake plants to improve air circulation. Make sure to disinfect your pruning tools (one part bleach to 4 parts water) after each cut.<br>
+                        • Remove diseased foliage from the plant and clean up fallen debris on the ground.<br>
+                        • Use a thick layer of mulch or organic compost to cover the soil after you have raked and cleaned it well. Mulch will prevent the disease spores from splashing back up onto the leaves.<br>
+                        • Milk sprays, made with 40% milk and 60% water, are an effective home remedy for use on a wide range of plants. For best results, spray plant leaves as a preventative measure every 10-14 days.<br>
+                        •  Wash foliage occasionally to disrupt the daily spore-releasing cycle. Neem oil and PM Wash, used on a 7 day schedule, will prevent fungal attack on plants grown indoors.<br>
+                        •  Water in the morning, so plants have a chance to dry during the day. Drip irrigation and soaker hoses will help keep the foliage dry.<br>
+                        •  Use a slow-release, organic fertilizer on crops and avoid excess nitrogen. Soft, leafy, new growth is most susceptible.<br>
+                        •  Destroy all plant debris after harvest (see Fall Garden Cleanup). Do NOT compost.<br>
+                    </h6>
+                    <a href=https://agribegri.com/products/rom-mildew-clean-1-kg--price-of-organic-fungicide-online-.php>Buy Product</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

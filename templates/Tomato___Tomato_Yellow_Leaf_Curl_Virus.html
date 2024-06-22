@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Leaf Disease Detection</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src={{user_image}} alt="User Image" style="width:500px;height:500px;margin-top:200px">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Cause: </b> </h4>
+                    <h6>
+                        • Tomato yellow leaf curl virus is a species in the genus Begomovirus and family Geminiviridae. <br>
+                        • Tomato yellow leaf curl virus (TYLCV) infection induces severe symptoms on tomato plants and causes serious yield losses worldwide. TYLCV is persistently transmitted by the sweetpotato whitefly, Bemisia tabaci (Gennadius).
+                      
+                    </h6>
+                    <h4><b> Symptoms: </b> </h4>
+                    <h6>
+                          • Symptoms of TYLCV infection include severe stunting, reduction of leaf size, upward cupping/curling of leaves, chlorosis on leaves and flowers, and reduction of fruit production.<br>
+                          •	 In seedlings, the shoots become shortened and give the young plants a bushy appearance.<br>
+                    </h6>
+                    <h4><b> Treatment: </b> </h4>
+                    <h6>
+                        • There is no treatments against the infection.<br>
+                        
+                        • Use a neonicotinoid insecticide, such as <strong>dinotefuran (Venom) imidacloprid (AdmirePro, Alias, Nuprid, Widow, and others) or thiamethoxam (Platinum)</strong>, as a soil application or through the drip irrigation system at transplanting of tomatoes or peppers.<br>
+                        
+                    </h6>
+                    <a href=https://www.amazon.in/Syngenta-Amistar-AZOXYSTROBIN-DIFENOCONAZOLE-Fungicide/dp/B08X2NMXWF/ref=asc_df_B08X2NMXWF/?tag=googleshopdes-21&linkCode=df0&hvadid=397009437277&hvpos=&hvnetw=g&hvrand=17126858104906641821&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062009&hvtargid=pla-1362835004385&psc=1&ext_vrnc=hi>Buy Product</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

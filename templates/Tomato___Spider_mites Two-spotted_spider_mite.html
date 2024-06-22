@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Leaf Disease Detection</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src={{user_image}} alt="User Image" style="width:500px;height:500px;margin-top:200px">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Cause: </b> </h4>
+                    <h6>
+                        • Tomato red spider mite (Tetranychus evansi) is a very tiny species of mite.<br>
+                        • Spider mites are so named because some species spin protective silk webs, similar to those made by spiders.
+                      
+                    </h6>
+                    <h4><b> Symptoms: </b> </h4>
+                    <h6>
+                          • The tomato red spider mites are pale-orange to red and feed on the underside of leaves. They cannot be seen easily with the naked eye.<br>
+                          •	Feeding damage caused by sucking sap appears as many shiny pale yellow marks on the top of the tomato leaf.<br>
+                          • ventually the leaves turn brown and die or fall off. Severe attack leads to formation of webs on the plant (see photo).<br>
+                          •Red spider mites are difficult but not impossible to control.<br>
+                    </h6>
+                    <h4><b> Treatment: </b> </h4>
+                    <h6>
+                        • Use the Bug Blaster to wash plants with a strong stream of water and reduce pest numbers.<br>
+                        • <strong>Nuke Em,</strong> a relatively new organic insecticide containing food-grade ingredients, works fast and kills most indoor gardening pests at the egg, larvae or adult stage. Best of all, it does this without leaving a residue on the leaves that can impact flavor.<br>
+                        • <strong>BotaniGard ES</strong> is a highly effective biological insecticide containing Beauveria bassiana, an entomopathogenic fungus that attacks a long-list of troublesome crop pests – even resistant strains! Weekly applications can prevent insect population explosions and provide protection equal to or better than conventional chemical pesticides.<br>
+                        • <strong>Mix Pure Neem Oil with Coco-Wet</strong> and apply every 3-5 days to kill pest eggs indoors and interrupt the reproductive cycle. Make sure to spray all plant parts, including the undersides of leaves
+                    </h6>
+                    <a href=https://www.bighaat.com/products/omite-insecticide?variant=31276117196823&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic>Buy Product</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

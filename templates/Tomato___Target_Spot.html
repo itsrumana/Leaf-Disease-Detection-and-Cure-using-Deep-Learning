@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Leaf Disease Detection</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src={{user_image}} alt="User Image" style="width:500px;height:500px;margin-top:200px">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Cause: </b> </h4>
+                    <h6>
+                        • Target spot of tomato is caused by the fungal pathogen Corynespora cassiicola. 1 The disease occurs on field-grown tomatoes in tropical and subtropical regions of the world.<br>
+                        • Target spot was first observed on tomatoes in the U.S. in Immokalee, Florida in 1967.
+                      
+                    </h6>
+                    <h4><b> Symptoms: </b> </h4>
+                    <h6>
+                          • The target spot fungus can infect all above-ground parts of the tomato plant. Plants are most susceptible as seedlings and just before and during fruiting.<br>
+                          •	The initial foliar symptoms are pinpoint-sized, water-soaked spots on the upper leaf surface. The spots develop into small, necrotic lesions that have light brown centers and dark margins. <br>
+                          • These symptoms may be confused with symptoms of bacterial spot.1,2,8 The lesions increase in size, become circular with gray to pale brown centers. As the lesions enlarge, they can develop darker concentric circles, hence, the name target spot.
+                          • The concentric circles are similar to those seen on early blight lesions. Yellow halos can form around the lesions on some varieties. Lesions can coalesce, forming large blighted areas on the leaflets, and infected leaves may drop prematurely.<br>
+                    </h6>
+                    <h4><b> Treatment: </b> </h4>
+                    <h6>
+                        • Many fungicides are registered to control of target spot on tomatoes. Growers should consult regional disease management guides for recommended products. 
+                        • Products containing chlorothalonil, mancozeb, and copper oxychloride have been shown to provide good control of target spot in research trials<br>
+                        • Treatment should start when the first spots are seen and continue at 10-14-day intervals until 3-4 weeks before last harvest. It is important to spray both sides of the leaves.<br>
+                        
+                    </h6>
+                    <a href=https://www.amazon.in/Katyayani-Propineb-Contact-Fungicide-Plants/dp/B082GBCXXN>Buy Product</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

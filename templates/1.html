@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Leaf Disease Detection</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/apple_cedar.JPG' )}}" alt="User Image" style="width:500px;height:500px;margin-top:200px">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Cause: </b> </h4>
+                    <h6>
+                        • Cedar apple rust is caused by a fungal pathogen called Gymnosporangium juniperi-virginianae. This fungus attacks crabapples and apples (Malus sp.) and eastern red cedar (Juniper) as well as a few other junipers not commonly grown in Illinois.<br>
+                        • In order to survive, the fungus must "move" from one type of host to another (e.g., from juniper to crabapple).
+                      
+                    </h6>
+                    <h4><b> Symptoms: </b> </h4>
+                    <h6>
+                          • On apple, the disease first appears on the leaves as small greenish yellow spots which gradually enlarge, changing to orange-yellow and becoming surrounded at the border by concentric red bands.<br>
+                          •	On the upper leaf surface, the spots become stippled with black specialized fruiting structures (spermogonia).<br>
+                          • On the underside of the leaf, lesions are formed called "aecia". At the point where an aecium is formed, hairlike projections can be observed .<br>
+                          •The leaf thickens around these projections, causing the aecium to have a cuplike appearance. These cuplike lesions can also appear on immature fruit of apples, causing dwarfing and malformation.<br>
+                    </h6>
+                    <h4><b> Treatment: </b> </h4>
+                    <h6>
+                        • Rake up and dispose of fallen leaves and other debris from under trees.<br>
+                        • Apply preventative,<strong> disease-fighting fungicides</strong> labeled for use on apples weekly, starting with bud break, to protect trees from spores being released by the juniper host. This occurs only once per year, so additional applications after this springtime spread are not necessary.<br>
+                        • Safely treat most fungal and bacterial diseases with <strong>SERENADE Garden</strong>. This broad spectrum bio-fungicide uses a patented strain of Bacillus subtilis that is registered for organic use. Best of all, SERENADE is completely non-toxic to honey bees and beneficial insects<br>
+                        • Containing sulfur and pyrethrins, Bonide® Orchard Spray is a safe, one-hit concentrate for insect attacks and fungal problems. For best results, apply as a protective spray early in the season.
+                    </h6>
+                    <a href=https://agribegri.com/products/buy-organic-fungicide-all-in-1-online--organic-fungicide-.php>Buy Product</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

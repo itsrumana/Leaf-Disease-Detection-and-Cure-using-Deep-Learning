@@ -1,0 +1,347 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bde420784.js" crossorigin="anonymous"></script>
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-color: gray;
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+        .about-item{
+            margin-bottom: 20px;
+            margin-top:20px;
+            background-color: white;
+            padding: 80px,30px;
+            box-shadow: 0 0 9px rgba(0,0,0 .6);
+        }
+        .about-item i{
+            font-size: 43px;
+            margin: 0;
+        }
+        .about-item h3{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .about-item hr{
+            width: 46px;
+            height: 3px;
+            background-color: #5fbff9;
+            margin: 0 auto;
+            border:none;
+        }
+        .about-item p{
+            margin-top: 20px;
+            
+        }
+        .about-item:hover{
+            background-color: white;
+        }
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover p{
+            color: black;
+        }
+        .about-item:hover hr{
+            background-color: black;
+        }
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover hr{
+            
+            transition: all 400ms ease-in-out;
+        }
+        .border-primary{
+                border-color:white;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+<section id="about">
+    <div>
+        <h2 style="text-align:center;font-size:4rem">Diseases</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="about-2">
+       <div class="content-box-lg">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary" style="border-color: white;">
+                    <img src="{{url_for('static',filename = 'images/grapeblack.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p> Grape Black rot is one of the most damaging diseases of grapes in Ohio and other northeastern states...</p>
+                           
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://ohioline.osu.edu/factsheet/plpath-fru-24';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/TomatoEarlyBlight4.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p> Tomato Early blight can be caused by two closely related species: Alternaria tomatophila and Alternaria solani...</p>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://extension.umn.edu/disease-management/early-blight-tomato-and-potato';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/apple_scab.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p>Apple scab, caused by the fungus Venturia inaequalis, is a serious fungal disease of apple in Ontario infecting foliage, blossoms and fruits...</p>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://netreefruit.org/apples/diseases/apple-scab';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/cherrypowdery1.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p> Cherry Powdery mildew of sweet and sour cherry is caused by Podosphaera clandestina, an obligate biotrophic fungus. Mid- and late-season sweet cherry...</p>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'http://treefruit.wsu.edu/crop-protection/disease-management/cherry-powdery-mildew/#:~:text=Powdery%20mildew%20of%20sweet%20and,1).';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/cercopora.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p>Gray leaf spot, caused by the fungus Cercospora zeae-maydis, occurs virtually every growing season...</p>
+                           <br>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/orange.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p>Huanglongbing (literally ‘Yellow Dragon Disease’ in Mandarin), previously known as 'citrus greening disease'...</p>
+                           <br>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://www.downtoearth.org.in/blog/agriculture/huanglongbing-curse-of-the-yellow-dragon-65704#:~:text=Huanglongbing%20(literally%20'Yellow%20Dragon%20Disease,the%20'Yellow%20Shoot%20Disease'.';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/peachbacterial.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p>Bacterial leaf spot of peach, also known as bacterial shot hole, is a common disease on older peach trees...</p>
+                           <br>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://www.gardeningknowhow.com/edible/fruits/peach/bacterial-spot-on-peach-trees.htm';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/pepperbacterial1.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p> Pepper Bacterial leaf spot, caused by Xanthomonas campestris pv. vesicatoria, is the most common and destructive disease for peppers...</p>
+                           
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://extension.wvu.edu/lawn-gardening-pests/plant-disease/fruit-vegetable-diseases/bacterial-leaf-spot-of-pepper#:~:text=Bacterial%20leaf%20spot%2C%20caused%20by,to%20another%20(Frank%20et%20al.';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+                    <div class="col-md-4">
+                       <div class="about-item text-center">
+                           
+                           <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'images/straberryscroch.JPG' )}}" alt="User Image" style="width:190px;height:190px;margin-top:70px">
+                    
+
+                </span>
+                           <br>
+                           
+                           <br>
+                           <p>Scorched strawberry leaves are caused by a fungal infection which affects the foliage of strawberry plantings....</p>
+                           <br>
+                           <button style="background-color: green; color:white; border-radius: 12px;padding: 20px;text-align: center;" class="GFG" 
+                             onclick="window.location.href = 'https://www.gardeningknowhow.com/edible/fruits/strawberry/strawberries-with-leaf-scorch.htm#:~:text=Scorched%20strawberry%20leaves%20are%20caused,on%20the%20topside%20of%20leaves.';">
+                             Know more..
+                          </button>
+                           <br>
+                           <br>
+                           <br>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+
+
+   </section>
+</body>
+
+</html>

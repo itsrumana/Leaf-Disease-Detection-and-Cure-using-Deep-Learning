@@ -1,0 +1,191 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8bde420784.js" crossorigin="anonymous"></script>
+    <title>Leaf Disease Detection</title>
+
+    <style>
+*{
+  padding:0;
+  margin:0;
+  
+}
+body
+{
+    
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-color: gray;
+    
+}
+.menu-bar
+{
+    background: rgb(0,100,0);
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+}
+.menu-bar ul li
+{
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active, .menu-bar ul li:hover
+{
+    background: #606060;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+        .about-item{
+            margin-bottom: 20px;
+            margin-top:20px;
+            background-color: white;
+            padding: 80px,30px;
+            box-shadow: 0 0 9px rgba(0,0,0 .6);
+        }
+        .about-item i{
+            font-size: 43px;
+            margin: 0;
+        }
+        .about-item h3{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .about-item hr{
+            width: 46px;
+            height: 3px;
+            background-color: #5fbff9;
+            margin: 0 auto;
+            border:none;
+        }
+        .about-item p{
+            margin-top: 20px;
+            
+        }
+        .about-item:hover{
+            background-color: aqua;
+        }
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover p{
+            color: #fff;
+        }
+        .about-item:hover hr{
+            background-color: #fff;
+        }
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover hr{
+            
+            transition: all 400ms ease-in-out;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+<div class="menu-bar">
+<ul>
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/how" >How It Works</a></li>
+    <li><a href="/index">Predict</a></li>
+    <li><a href="/dise">Diseases</a></li>
+</ul>
+    </div>
+
+<section id="about">
+    <div>
+        <h1 style="text-align:center;font-size:4rem">How It Works</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="about-2">
+       <div class="content-box-lg">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           <br>
+                           <i class="fa-solid fa-diamond-turn-right"></i>
+                           <br>
+                           <h3>Navigation</h3>
+                           <br>
+                           <hr>
+                           <br>
+                           <p>Navigate to Predict page.</p>
+                           <br>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           <br>
+                           <i class="fa-solid fa-upload"></i>
+                           <br>
+                           <h3>Upload</h3>
+                           <br>
+                           <hr>
+                           <br>
+                           <p>Upload the image of leaf to be predicted.</p>
+                           <br>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="about-item text-center">
+                           <br>
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                           <br>
+                           <h3>Prediction</h3>
+                           <br>
+                           <hr>
+                           
+                           <p>Click on predict to know the cause, symptoms, cure for the disease.</p>
+                           <br>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+
+
+   </section>
+</body>
+
+</html>
